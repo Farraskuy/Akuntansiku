@@ -23,9 +23,6 @@
 
     {{-- Custom Style --}}
     <link rel="stylesheet" href="{{ url('assets/css') }}/style.css">
-
-    {{-- Sidebar --}}
-    <link rel="stylesheet" href="{{ url('assets/css') }}/sidebar.css">
   </head>
 
   <body>
