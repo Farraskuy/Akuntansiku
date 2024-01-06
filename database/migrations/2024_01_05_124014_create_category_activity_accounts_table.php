@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cash_accounts', function (Blueprint $table) {
+        Schema::create('category_activity_accounts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-<<<<<<< HEAD
-            $table->string('category');
-=======
->>>>>>> e11ae0830b1c36cb86a38cda53a3913167a8084a
-            $table->string('bank_name');
-            $table->decimal('balance', 23, 3);
             $table->text('description');
             $table->timestamps();
         });
@@ -30,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cash_accounts');
+        Schema::dropIfExists('main_activity_accounts');
     }
 };

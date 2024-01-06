@@ -11,17 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cash_accounts', function (Blueprint $table) {
+        Schema::create('jurnal', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-<<<<<<< HEAD
-            $table->string('category');
-=======
->>>>>>> e11ae0830b1c36cb86a38cda53a3913167a8084a
-            $table->string('bank_name');
-            $table->decimal('balance', 23, 3);
-            $table->text('description');
+            $table->enum('status', ['open', 'close']);
+            $table->string('filename')->default(null)->nullable();
             $table->timestamps();
+            $table->dateTime('closed_at')->nullable();
         });
     }
 
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cash_accounts');
+        Schema::dropIfExists('jurnal');
     }
 };
