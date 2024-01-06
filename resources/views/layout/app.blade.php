@@ -12,8 +12,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .content-auto {
-                content-visibility: auto;
+            .active {
+                @apply ml-3 mb-5 text-blue-700 font-semibold bg-blue-300 p-3 rounded-xl;
+            }
+
+            .non-active {
+                @apply ml-6 mb-5 text-gray-400 font-semibold;
             }
         }
     </style>
