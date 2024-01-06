@@ -11,20 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ledger', function (Blueprint $table) {
+        Schema::create('mutations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('activity_account_id');
-            $table->decimal('beginning_cash_balance', 23, 3);
+            $table->unsignedBigInteger('sender_account_id');
+            $table->unsignedBigInteger('recepient_account_id');
+            $table->decimal('beginning_cash_balance_recepient', 23, 3);
             $table->decimal('amount_IDR', 23, 3);
             $table->decimal('amount_USD', 23, 3);
             $table->decimal('exchange_rate_IDR_to_USD', 23, 3);
-            $table->decimal('end_cash_balance', 23, 3);
-            $table->enum('type', ['debit', 'credit']);
+            $table->decimal('end_cash_balance_recepient', 23, 3);
+            $table->enum('type', ['transfer', 'deposit']);
             $table->text('detail');
             $table->timestamps();
 
-            $table->foreign('activity_account_id')->references('id')->on('activity_accounts')->restrictOnDelete();
+            $table->foreign('sender_account_id')->references('id')->on('cash_accounts')->restrictOnDelete();
+            $table->foreign('recepient_account_id')->references('id')->on('cash_accounts')->restrictOnDelete();
             $table->foreign('user_id')->references('id')->on('users')->restrictOnDelete();
         });
     }
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ledger');
+        Schema::dropIfExists('mutations');
     }
 };
