@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Page
+use App\Http\Controllers\Page;
 use App\Http\Controllers\PagesController;
-PagesControlleruse Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
