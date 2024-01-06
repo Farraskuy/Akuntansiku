@@ -1,7 +1,7 @@
 @extends('pages.users.sidebar')
 
 @section('container')
-    <div class="max-w-screen mb-4">
+    <div class="max-w-screen mb-4 animate-slideInUp" data-te-animation-start="onLoad" data-te-animation-init="">
         {{-- Nav --}}
         <div class="w-full bg-white h-24 rounded-2xl mb-6 pl-8 flex items-center justify-between">
             <h1 class="text-3xl font-bold">Cash & Bank</h1>
