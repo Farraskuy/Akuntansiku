@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ledger', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('jurnal_id');
             $table->unsignedBigInteger('activity_account_id');
-            $table->decimal('beginning_cash_balance', 23, 3);
+            $table->decimal('beg_cash_balance', 23, 3);
             $table->decimal('amount_IDR', 23, 3);
             $table->decimal('amount_USD', 23, 3);
             $table->decimal('exchange_rate_IDR_to_USD', 23, 3);
@@ -25,6 +26,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('activity_account_id')->references('id')->on('activity_accounts')->restrictOnDelete();
+            $table->foreign('jurnal_id')->references('id')->on('jurnal')->restrictOnDelete();
             $table->foreign('user_id')->references('id')->on('users')->restrictOnDelete();
         });
     }
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ledger');
+        Schema::dropIfExists('transactions');
     }
 };

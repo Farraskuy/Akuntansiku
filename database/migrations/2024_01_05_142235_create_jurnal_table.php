@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('activity_accounts', function (Blueprint $table) {
+        Schema::create('jurnal', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_activity_account_id');
-            $table->string('name');
-            $table->text('description');
+            $table->enum('status', ['open', 'close']);
+            $table->string('filename')->default(null)->nullable();
             $table->timestamps();
-
-            $table->foreign('category_activity_account_id')->references('id')->on('category_activity_accounts')->restrictOnDelete();
+            $table->dateTime('closed_at')->nullable();
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sub_activity_accounts');
+        Schema::dropIfExists('jurnal');
     }
 };
