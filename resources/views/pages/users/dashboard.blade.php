@@ -1,7 +1,7 @@
 @extends('pages.users.sidebar')
 
 @section('container')
-    <div class="max-w-screen mb-4">
+    <div class="max-w-screen mb-4 animate-slideInUp" data-te-animation-start="onLoad" data-te-animation-init="">
 
         {{-- Nav --}}
         <div class="w-full bg-white h-24 rounded-2xl mb-6 pl-8 flex items-center justify-between">
@@ -13,8 +13,8 @@
         </div>
 
         {{-- Section 2 --}}
-        <div class="w-full h-auto flex mb-6">
-            <div class="w-1/4 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
+        <div class="w-full h-auto flex flex-wrap md:flex-nowrap mb-6">
+            <div class="xl:w-1/4 lg:w-1/2 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-500 ml-10 mr-4"></div>
                 <div>
                     <p class="text-xl font-bold">$29,00</p>
@@ -29,7 +29,7 @@
                 </p>
                 <p class="absolute right-5 bottom-3 text-blue-500 text-md">+ 20%</p>
             </div>
-            <div class="w-1/4 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
+            <div class="xl:w-1/4 lg:w-1/2 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-500 ml-10 mr-4"></div>
                 <div>
                     <p class="text-xl font-bold">$29,00</p>
@@ -44,7 +44,7 @@
                 </p>
                 <p class="absolute right-5 bottom-3 text-blue-500 text-md">+ 20%</p>
             </div>
-            <div class="w-1/4 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
+            <div class="xl:w-1/4 lg:w-1/2 bg-white h-40 rounded-2xl mr-6 flex items-center relative overflow-hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-500 ml-10 mr-4"></div>
                 <div>
                     <p class="text-xl font-bold">$29,00</p>
@@ -59,7 +59,7 @@
                 </p>
                 <p class="absolute right-5 bottom-3 text-blue-500 text-md">+ 20%</p>
             </div>
-            <div class="w-1/4 bg-white h-40 rounded-2xl flex items-center relative overflow-hidden">
+            <div class="xl:w-1/4 lg:w-1/2 bg-white h-40 rounded-2xl flex items-center relative overflow-hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-500 ml-10 mr-4"></div>
                 <div>
                     <p class="text-xl font-bold">$29,00</p>
@@ -88,19 +88,19 @@
 
                 <div class="mb-3">
                     <p class="mb-1">Good Review</p>
-                    <div class="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="2xl:w-80 w-64 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <p class="mb-1">Fast Response</p>
-                    <div class="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="2xl:w-80 w-64 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
                     </div>
                 </div class="mb-3">
                 <div>
                     <p class="mb-1">Fast Delivery</p>
-                    <div class="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="2xl:w-80 w-64 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: 15%"></div>
                     </div>
                 </div>
