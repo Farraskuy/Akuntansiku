@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CashOrBankAccountController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 

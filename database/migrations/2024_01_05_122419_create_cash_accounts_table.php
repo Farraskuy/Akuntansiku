@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('cash_accounts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-<<<<<<< HEAD
-            $table->string('category');
-=======
->>>>>>> e11ae0830b1c36cb86a38cda53a3913167a8084a
+            $table->enum('category', ['cash', 'bank']);
             $table->string('bank_name');
             $table->decimal('balance', 23, 3);
             $table->text('description');
