@@ -2,7 +2,7 @@
 
 @section('body')
     {{-- SIDEBAR --}}
-    <div class="fixed top-0 hidden h-[100vh] w-[250px] lg:block py-8 px-4 md:top-0 bg-white text-black">
+    <div class="md:hidden fixed top-0 hidden h-[100vh] w-[250px] lg:block py-8 px-4 md:top-0 bg-white text-black">
         <h1 class="text-3xl font-bold mb-10">Akuntansiku</h1>
         <h2 class="text-xl font-bold mb-4">Main Navigation</h2>
         <ul class="">
@@ -73,7 +73,7 @@
     </div>
 
     {{-- CONTAINER --}}
-    <div class="w-screen h-full pb-6 bg-slate-300 pl-72 pt-6 pr-8">
+    <div class="w-screen h-screen bg-slate-300 2xl:overflow-hidden overflow-auto lg:pl-72 pl-10 pt-6 pr-8">
         @yield('container')
     </div>
 @endsection
