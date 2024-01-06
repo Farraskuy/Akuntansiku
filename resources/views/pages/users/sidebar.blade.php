@@ -73,7 +73,7 @@
     </div>
 
     {{-- CONTAINER --}}
-    <div class="w-screen h-screen bg-slate-300 overflow-hidden pl-72 pt-6 pr-8">
+    <div class="w-screen h-full pb-6 bg-slate-300 pl-72 pt-6 pr-8">
         @yield('container')
     </div>
 @endsection
