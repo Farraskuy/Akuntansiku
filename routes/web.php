@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Page
+use App\Http\Controllers\PagesController;
+PagesControlleruse Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/bank', [PagesController::class, 'bank']);
